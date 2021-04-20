@@ -2,11 +2,11 @@
   "name": "gulp-start",
   "version": "1.0.0",
   "description": "",
-  "homepage": "https://sergitarius.github.io/Chairs/",
+  "homepage": "https://Sergitarius.github.io/Chairs/",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d app"
   },
   "author": "SS",
   "license": "ISC",
