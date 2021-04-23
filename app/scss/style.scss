@@ -1054,8 +1054,8 @@
 		margin: 0 6px;
 	}
 	&__arrow--disabled {
-		// opacity: 0;
-		display: none;
+		opacity: 0;
+		pointer-events: none;
 	}
 	&__list-num {
 		font-size: 14px;
@@ -1064,5 +1064,118 @@
 	}
 	&__list-num--active {
 		color: $title;
+	}
+}
+.blog-one__item {
+	p {
+		margin-bottom: 40px;
+	}
+	blockquote {
+		font-size: 24px;
+		font-weight: 300;
+		font-style: italic;
+		line-height: 38px;
+		color: $title;
+		margin-bottom: 30px;
+		padding: 0 40px;
+	}
+	.blog__blockquote-author::before {
+		margin-right: auto;
+		margin-left: 0;
+	}
+}
+.blog-one {
+	&__tags {
+		margin-bottom: 30px;
+	}
+	&__tags-title {
+		font-size: 20px;
+		line-height: 31px;
+		@extend %title-font;
+		color: $title;
+		margin-bottom: 15px;
+	}
+	&__tags-link {
+		display: inline-block;
+		margin-bottom: 10px;
+		text-align: center;
+		font-weight: 600;
+		font-size: 14px;
+		color: #8f8d8d;
+		padding: 0 16px;
+		border: 1px solid rgba(#454647, 0.5);
+		border-radius: 14px;
+		margin-right: 23px;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	&__links {
+		padding: 40px 0 30px;
+		border-top: 1px solid #dfdfdf;
+		border-bottom: 1px solid #dfdfdf;
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 35px;
+	}
+	&__link {
+		width: 243px;
+		position: relative;
+		font-weight: 600;
+		font-size: 14px;
+		color: #707070;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 12px;
+			height: 23px;
+		}
+	}
+	&__link-prev {
+		padding-left: 33px;
+		&::before {
+			background-image: url(../images/blog-one-prev.svg);
+			left: 0;
+		}
+	}
+	&__link-next {
+		padding-right: 33px;
+		text-align: right;
+		&::before {
+			background-image: url(../images/blog-one-next.svg);
+			right: 0;
+		}
+	}
+	&__comments-title {
+		font-size: 20px;
+		line-height: 31px;
+		color: $title;
+		@extend %title-font;
+		margin-bottom: 21px;
+	}
+	&__comments-item {
+		display: flex;
+		justify-content: space-between;
+		align-items: start;
+	}
+	&__comments-avatar {
+		width: 64px;
+		height: 64px;
+		object-fit: cover;
+		border-radius: 50%;
+		margin-right: 13px;
+	}
+	&__comments-reply {
+		font-weight: 600;
+		font-size: 14px;
+		text-align: right;
+		color: #707070;
+		background-color: transparent;
+		border: none;
+		cursor: pointer;
+		margin-left: 5px;
+		padding: 0;
 	}
 }
