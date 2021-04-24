@@ -1159,13 +1159,25 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: start;
+		margin-bottom: 40px;
 	}
+
 	&__comments-avatar {
 		width: 64px;
 		height: 64px;
 		object-fit: cover;
 		border-radius: 50%;
 		margin-right: 13px;
+	}
+	&__comments-name {
+		color: $title;
+		font-size: 16px;
+		line-height: 23px;
+		@extend %title-font;
+	}
+	&__comments-date {
+		color: #a1a1a1;
+		font-size: 14px;
 	}
 	&__comments-reply {
 		font-weight: 600;
@@ -1177,5 +1189,62 @@
 		cursor: pointer;
 		margin-left: 5px;
 		padding: 0;
+	}
+	&__form {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	&__form-title {
+		color: $title;
+		@extend %title-font;
+		font-size: 16px;
+		line-height: 23px;
+		margin-bottom: 25px;
+	}
+	&__form-textarea {
+		border: 1px solid #dfdfdf;
+		border-radius: 24px;
+		margin-bottom: 12px;
+		padding: 14px 17px;
+		width: 100%;
+		resize: none;
+		min-height: 125px;
+		&::placeholder {
+			color: #a1a1a1;
+			font-family: "Open Sans", sans-serif;
+			font-size: 16px;
+			line-height: 27px;
+			font-weight: 400;
+		}
+	}
+	&__form-label {
+		width: 100%;
+		margin-bottom: 20px;
+		color: #a1a1a1;
+	}
+	&__form-input {
+		border: 1px solid #dfdfdf;
+		border-radius: 20px;
+		width: 48%;
+		padding: 6px 17px;
+		margin-bottom: 20px;
+		margin-right: 10px;
+		&::placeholder {
+			color: #a1a1a1;
+			font-family: "Open Sans", sans-serif;
+			font-size: 16px;
+			line-height: 27px;
+			font-weight: 400;
+		}
+	}
+	&__form-btn {
+		border: none;
+		border-radius: 21px;
+		background-color: $title;
+		color: #fffff0;
+		padding: 6px 60px;
+		cursor: pointer;
+		font-weight: 600;
 	}
 }
