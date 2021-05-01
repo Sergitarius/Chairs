@@ -1,9 +1,20 @@
+@media (max-width: 1700px) {
+	.contact-slider {
+		&__img {
+			width: 100%;
+		}
+	}
+}
+
 @media (max-width: 1366px) {
 	.collection {
 		grid-template-columns: repeat(3, 1fr);
 		&__images {
 			width: 100%;
 		}
+	}
+	.map {
+		margin-top: 0;
 	}
 }
 
@@ -22,7 +33,33 @@
 			height: 640px;
 		}
 	}
+	.contact-slider {
+		&__img {
+			height: 240px;
+		}
+	}
 }
+@media (max-width: 1040px) {
+	.blog {
+		&__inner {
+			flex-wrap: wrap;
+		}
+		&__items {
+			max-width: 100%;
+		}
+		&__item-img {
+			max-width: 100%;
+			width: 100%;
+		}
+	}
+	.aside {
+		width: 100%;
+		margin-left: 0;
+		order: -1;
+		margin-bottom: 50px;
+	}
+}
+
 @media (max-width: 992px) {
 	.footer {
 		&__info {
@@ -76,6 +113,13 @@
 		}
 		&__item--production {
 			margin-left: 50px;
+		}
+	}
+	.contact {
+		.contact__social,
+		&__box,
+		&__form {
+			padding-left: 0;
 		}
 	}
 }
@@ -150,6 +194,11 @@
 			grid-template-columns: repeat(3, 1fr);
 		}
 	}
+	.map {
+		iframe {
+			height: 300px;
+		}
+	}
 }
 
 @media (max-width: 650px) {
@@ -215,6 +264,14 @@
 			line-height: 36px;
 		}
 	}
+	.contact {
+		&__form-input {
+			width: 100%;
+		}
+	}
+	.slick-dots li {
+		margin: 0 5px;
+	}
 }
 
 @media (max-width: 540px) {
@@ -275,6 +332,11 @@
 			display: block;
 			padding: 15px 0;
 		}
+		&__list-link--active {
+			&::after {
+				display: none;
+			}
+		}
 	}
 	.collection {
 		grid-template-columns: repeat(1, 1fr);
@@ -310,6 +372,61 @@
 			margin-right: 10px;
 		}
 	}
+	.blog {
+		&__item-title {
+			font-size: 24px;
+			line-height: 38px;
+		}
+		&__category-title,
+		&__tags-title,
+		&__blockquote-author {
+			font-size: 16px;
+			line-height: 23px;
+		}
+	}
+	.recent-posts {
+		&__title {
+			font-size: 16px;
+			line-height: 23px;
+		}
+	}
+	.blog-one {
+		&__form-input {
+			width: 100%;
+		}
+	}
+	.blog-one {
+		&__links {
+			padding: 30px 0;
+		}
+		&__link {
+			span {
+				display: none;
+			}
+		}
+		&__comments-name,
+		&__form-title {
+			font-size: 16px;
+			line-height: 27px;
+		}
+		&__comments-item {
+			flex-wrap: wrap;
+		}
+		&__comments-avatar {
+			width: 45px;
+			height: 45px;
+		}
+		&__comments-name,
+		&__comments-date {
+			margin-left: 55px;
+		}
+		&__comments-info {
+			margin-top: -46px;
+		}
+		&__comments-reply {
+			margin-left: 0;
+		}
+	}
 }
 
 @media (max-width: 375px) {
@@ -326,6 +443,19 @@
 		&__form-button {
 			width: 100%;
 			margin-top: 10px;
+		}
+	}
+	.contact-slider {
+		&__img {
+			height: 310px;
+		}
+	}
+	.slick-dots li {
+		margin: 0 1px;
+	}
+	.blog-one {
+		&__item blockquote {
+			padding: 0 20px;
 		}
 	}
 }
